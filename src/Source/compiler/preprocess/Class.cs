@@ -3,12 +3,11 @@ using Reference;
 
 namespace Source
 {
-    public class Class : ICompileModule
+    public class Class : Foo, ICompileModule
     {
         public void BeforeCompile(IBeforeCompileContext context)
         {
-            var foo = new Foo();
-            foo.Bar();
+            Bar();
         }
         
         public void AfterCompile(IAfterCompileContext context)
